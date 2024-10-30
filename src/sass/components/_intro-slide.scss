@@ -1,0 +1,34 @@
+.intro-slide {
+  padding: 2rem;
+  h2 {
+    font-size: 2rem;
+  }
+  & * + * {
+    margin-top: 1rem;
+  }
+  p {
+    color: #e06c75;
+    font-size: 2rem;
+    margin-inline: auto;
+    background: #282c34;
+    padding: 0.5rem 1rem;
+    width: fit-content;
+    outline: none;
+    opacity: 0;
+    &:focus,
+    &:has(~ p:focus) {
+      opacity: 1;
+    }
+    &.stat {
+      color: #98c379;
+    }
+    span {
+      &.operator {
+        color: #abb2bf;
+      }
+      &.question {
+        color: #98c379;
+      }
+    }
+  }
+}

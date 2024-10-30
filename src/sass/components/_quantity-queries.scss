@@ -1,0 +1,35 @@
+@use "../abstracts/mixins" as *;
+
+.quantity-queries {
+  padding: 7rem 2rem 2rem;
+  display: grid;
+  place-items: center;
+  ul {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  li {
+    position: relative;
+    border: 1px solid black;
+    display: flex;
+    min-width: 100px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &::before {
+      content: var(--content);
+      position: absolute;
+      bottom: 105%;
+    }
+  }
+  li:has(*:only-child) {
+    background-color: palegoldenrod;
+    --content: "I have only one child";
+  }
+  li:has(*:nth-child(4)) {
+    background-color: palegreen;
+    --content: "I have at least four children";
+  }
+}

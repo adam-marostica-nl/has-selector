@@ -1,0 +1,47 @@
+.content-aware-styling {
+  padding-block: 3rem;
+  overflow: scroll;
+
+  & > * + * {
+    margin-top: 3rem;
+  }
+
+  img {
+    margin-inline: auto;
+  }
+
+  .box {
+    position: relative;
+    border: 1px solid black;
+    padding: 1rem;
+    width: min(90%, 300px);
+    margin-inline: auto;
+    &::before {
+      position: absolute;
+      content: var(--selector);
+      bottom: calc(100% + 0.5rem);
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    &:has(p) {
+      background-color: lightgoldenrodyellow;
+      --selector: ":has(p)";
+    }
+    &:has(h2) {
+      background-color: lightblue;
+      border-radius: 999px;
+      --selector: ":has(h2)";
+    }
+    &:has(img) {
+      aspect-ratio: 1 / 1;
+      display: grid;
+      place-items: center;
+      background-color: lightcoral;
+      border-radius: 0 1.5rem;
+      img {
+        border-radius: 0 1rem;
+      }
+      --selector: ":has(img)";
+    }
+  }
+}

@@ -1,0 +1,91 @@
+.more-quantity-queries {
+  padding: 2rem;
+
+  h2 {
+    font-size: 2rem;
+  }
+  .progress-bar {
+    position: relative;
+    width: 80%;
+    height: 1rem;
+    background-color: rgb(231, 231, 231);
+    border: 1px solid black;
+    border-radius: 999px;
+    margin-top: 1rem;
+    margin-inline: auto;
+    &::before {
+      position: absolute;
+      content: var(--selector);
+      top: calc(100% + 0.25rem);
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 0.75rem;
+      width: 100%;
+    }
+    &::after {
+      position: absolute;
+      content: "";
+      display: block;
+      width: var(--progress-width, 0%);
+      height: 100%;
+      background-color: #08ea08;
+      border-radius: 999px;
+      transition: width 0.5s ease-in-out;
+    }
+  }
+  .checkbox-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 4rem;
+    justify-content: center;
+    gap: 1rem;
+
+    input[type="checkbox"] {
+      accent-color: #08ea08;
+      width: 1.5rem;
+      height: 1.5rem;
+      cursor: pointer;
+      transition: filter 300ms ease-in-out;
+      
+
+      padding: 20px;
+      margin: 3px;
+      
+
+      &:hover {
+        filter: brightness(1.1);
+      }
+    }
+  }
+
+  &:has(input:checked) {
+    --progress-width: 20%;
+    --selector: ":has(input:checked)";
+  }
+
+  &:has(input:checked ~ input:checked) {
+    --progress-width: 40%;
+    --selector: ":has(input:checked ~ input:checked)";
+  }
+
+  &:has(input:checked ~ input:checked ~ input:checked) {
+    --progress-width: 60%;
+    --selector: ":has(input:checked ~ input:checked ~ input:checked)";
+  }
+
+  &:has(input:checked ~ input:checked ~ input:checked ~ input:checked) {
+    --progress-width: 80%;
+    --selector: ":has(input:checked ~ input:checked ~ input:checked ~ input:checked)";
+  }
+
+  &:has(
+      input:checked
+        ~ input:checked
+        ~ input:checked
+        ~ input:checked
+        ~ input:checked
+    ) {
+    --progress-width: 100%;
+    --selector: ":has(input:checked ~ input:checked ~ input:checked ~ input:checked ~ input:checked)";
+  }
+}

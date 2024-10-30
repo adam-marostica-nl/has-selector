@@ -1,0 +1,87 @@
+.more-content-aware-layouts {
+  max-height: 80vw;
+  padding-block: 3rem;
+  overflow: scroll;
+
+  ul > * + * {
+    margin-top: 5rem;
+  }
+
+  display: grid;
+  place-items: center;
+  li {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "card";
+    &::before {
+      width: max-content;
+      position: absolute;
+      content: var(--selector);
+      bottom: calc(100% + 1rem);
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    img {
+      grid-area: card;
+      transition: transform 0.5s ease-in-out;
+    }
+    &:has(:hover) {
+      &:has(img + img) {
+        --selector: ":has(:hover):has(img + img)";
+        img:first-child {
+          transform: rotate(-8deg) translateX(-20%);
+        }
+        img:nth-child(2) {
+          transform: rotate(8deg) translateX(20%);
+        }
+      }
+      &:has(img + img + img) {
+        --selector: ":has(:hover):has(img + img + img)";
+        img:first-child {
+          transform: rotate(-10deg) translateX(-25%);
+        }
+        img:nth-child(2) {
+          transform: rotate(0deg) translateX(0%);
+        }
+        img:nth-child(3) {
+          transform: rotate(10deg) translateX(25%);
+        }
+      }
+      &:has(img + img + img + img) {
+        --selector: ":has(:hover):has(img + img + img + img)";
+        img:first-child {
+          transform: rotate(-18deg) translateX(-30%);
+        }
+        img:nth-child(2) {
+          transform: rotate(-6deg) translateX(-10%);
+        }
+        img:nth-child(3) {
+          transform: rotate(6deg) translateX(10%);
+        }
+        img:nth-child(4) {
+          transform: rotate(18deg) translateX(30%);
+        }
+      }
+      &:has(img + img + img + img + img) {
+        --selector: ":has(:hover):has(img + img + img + img + img)";
+        img:first-child {
+          transform: rotate(-20deg) translateX(-50%);
+        }
+        img:nth-child(2) {
+          transform: rotate(-10deg) translateX(-25%);
+        }
+        img:nth-child(3) {
+          transform: rotate(0deg) translateX(0%);
+        }
+        img:nth-child(4) {
+          transform: rotate(10deg) translateX(25%);
+        }
+        img:nth-child(5) {
+          transform: rotate(20deg) translateX(50%);
+        }
+      }
+    }
+  }
+}

@@ -8,5 +8,424 @@
     <link rel="stylesheet" href="./sass/main.scss" />
     <title>Home</title>
   </head>
-  <body></body>
+  <body>
+    <ul class="slide-list">
+      <!-- intro slide -->
+      <li class="slide-item">
+        <a href="#" class="slide-anchor">Introduction</a>
+        <div class="slide-content">
+          <div class="slide-screen intro-slide">
+            <h2>In 1998, there was CSS2, which gave us:</h2>
+            <p tabindex="0">a <span class="operator">&gt;</span> b</p>
+            <p tabindex="0">a <span class="operator">+</span> b</p>
+            <p tabindex="0">a <span class="operator">~</span> b</p>
+            <p tabindex="0">a <span class="operator">&lt;</span> b <span class="question">?</span></p>
+            <p tabindex="0">a <span class="operator">-</span> b <span class="question">?</span></p>
+            <p tabindex="0">a <span class="operator">∫</span> b<span class="question">?</span></p>
+            <p tabindex="0" class="stat">91.66% all browsers!</p>
+            <p tabindex="0" class="stat">94.38% tracked users!!</p>
+            <p tabindex="0" class="stat">95.78% mobile users!!!</p>
+          </div>
+        </div>
+      </li>
+
+      <!-- title slide -->
+      <li class="slide-item">
+        <a href="#" class="slide-anchor">The :has() selector</a>
+        <div class="slide-content">
+          <div class="slide-screen title-slide">
+            <h1>I can haz has?</h1>
+            <img src="https://i.ibb.co/xq62yP4/hascat.png" alt="hascat" />
+          </div>
+        </div>
+      </li>
+
+      <!-- form validation-->
+      <li class="slide-item">
+        <a href="#" class="slide-anchor">Form Validation</a>
+        <div class="slide-content">
+          <div class="slide-screen form-validation">
+            <form>
+              <label for="number"
+                >Enter a number between 0 and 100
+                <input
+                  type="number"
+                  id="number"
+                  min="0"
+                  max="100"
+                  placeholder="42 maybe?"
+                />
+              </label>
+              <p class="correct">That's a great number! Well done!</p>
+              <p class="incorrect">
+                I said between 0 and 100! What's wrong with you?
+              </p>
+            </form>
+          </div>
+        </div>
+      </li>
+
+      <!-- Content Aware Styling -->
+      <li class="slide-item">
+        <a href="#" class="slide-anchor">Content Aware Styling</a>
+        <div class="slide-content">
+          <div class="slide-screen content-aware-styling">
+            <div class="box">
+              <p>I am a paragraph</p>
+            </div>
+            <div class="box">
+              <h2>I am a heading</h2>
+            </div>
+            <div class="box">
+              <img src="https://i.ibb.co/R0RbcQj/ddhick1.webp" alt="ddhick1" />
+            </div>
+          </div>
+        </div>
+      </li>
+
+      <!-- Content Aware Layouts -->
+      <li class="slide-item">
+        <a href="#" class="slide-anchor">Content Aware Layouts</a>
+        <div class="slide-content">
+          <div class="slide-screen content-aware-layout">
+            <h2>Content Aware Layouts</h2>
+            <ul>
+              <li>
+                <h3>:has(h3:only-child)</h3>
+              </li>
+              <li>
+                <h3>:has(h3 + img)</h3>
+                <img
+                  src="https://i.ibb.co/R0RbcQj/ddhick1.webp"
+                  alt="ddhick1"
+                />
+              </li>
+              <li>
+                <h3>:has(h3 + img + img)</h3>
+                <img
+                  src="https://i.ibb.co/8B3T6Zv/delaney1.webp"
+                  alt="delaney1"
+                />
+                <img
+                  src="https://i.ibb.co/yPWVggT/hickory2.webp"
+                  alt="hickory2"
+                />
+              </li>
+            </ul>
+          </div>
+        </div>
+      </li>
+
+      <!-- quantity queries -->
+      <li class="slide-item">
+        <a href="#" class="slide-anchor">Quantity Queries</a>
+        <div class="slide-content">
+          <div class="slide-screen quantity-queries">
+            <ul>
+              <li>
+                <p>One</p>
+              </li>
+              <li>
+                <p>One</p>
+                <p>Two</p>
+              </li>
+              <li>
+                <p>One</p>
+                <p>Two</p>
+                <p>Three</p>
+              </li>
+              <li>
+                <p>One</p>
+                <p>Two</p>
+                <p>Three</p>
+                <p>Four</p>
+              </li>
+              <li>
+                <p>One</p>
+                <p>Two</p>
+                <p>Three</p>
+                <p>Four</p>
+                <p>Five</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </li>
+
+      <!-- more quantity queries -->
+      <li class="slide-item">
+        <a href="#" class="slide-anchor">More quantity queries</a>
+        <div class="slide-content">
+          <div class="slide-screen more-quantity-queries">
+            <h2>Checkbox Checking Progress</h2>
+            <div class="progress-bar"></div>
+            <div class="checkbox-container">
+              <label for="checkbox-1"> Checkbox 1 </label>
+              <input class="checkbox" id="checkbox-1" type="checkbox" />
+              <label for="checkbox-2"> Checkbox 2 </label>
+              <input class="checkbox" id="checkbox-2" type="checkbox" />
+              <label for="checkbox-3"> Checkbox 3 </label>
+              <input class="checkbox" id="checkbox-3" type="checkbox" />
+              <label for="checkbox-4"> Checkbox 4 </label>
+              <input class="checkbox" id="checkbox-4" type="checkbox" />
+              <label for="checkbox-5"> Checkbox 5 </label>
+              <input class="checkbox" id="checkbox-5" type="checkbox" />
+            </div>
+          </div>
+        </div>
+      </li>
+
+      <!-- More Content Aware Layouts -->
+      <li class="slide-item">
+        <a href="#" class="slide-anchor">More Content Aware Layouts</a>
+        <div class="slide-content">
+          <div class="slide-screen more-content-aware-layouts">
+            <ul>
+              <li>
+                <img
+                  src="https://deckofcardsapi.com/static/img/AS.png"
+                  alt=""
+                />
+              </li>
+              <li>
+                <img
+                  src="https://deckofcardsapi.com/static/img/KS.png"
+                  alt=""
+                />
+                <img
+                  src="https://deckofcardsapi.com/static/img/KD.png"
+                  alt=""
+                />
+              </li>
+              <li>
+                <img
+                  src="https://deckofcardsapi.com/static/img/AD.png"
+                  alt=""
+                />
+                <img
+                  src="https://deckofcardsapi.com/static/img/AC.png"
+                  alt=""
+                />
+                <img
+                  src="https://deckofcardsapi.com/static/img/AH.png"
+                  alt=""
+                />
+              </li>
+              <li>
+                <img
+                  src="https://deckofcardsapi.com/static/img/7H.png"
+                  alt=""
+                />
+                <img
+                  src="https://deckofcardsapi.com/static/img/7D.png"
+                  alt=""
+                />
+                <img
+                  src="https://deckofcardsapi.com/static/img/7C.png"
+                  alt=""
+                />
+                <img
+                  src="https://deckofcardsapi.com/static/img/7S.png"
+                  alt=""
+                />
+              </li>
+              <li>
+                <img
+                  width="226"
+                  height="314"
+                  src="https://deckofcardsapi.com/static/img/5H.png"
+                  alt=""
+                />
+                <img
+                  width="226"
+                  height="314"
+                  src="https://deckofcardsapi.com/static/img/6H.png"
+                  alt=""
+                />
+                <img
+                  width="226"
+                  height="314"
+                  src="https://deckofcardsapi.com/static/img/7H.png"
+                  alt=""
+                />
+                <img
+                  width="226"
+                  height="314"
+                  src="https://deckofcardsapi.com/static/img/8H.png"
+                  alt=""
+                />
+                <img
+                  width="226"
+                  height="314"
+                  src="https://deckofcardsapi.com/static/img/9H.png"
+                  alt=""
+                />
+              </li>
+            </ul>
+          </div>
+        </div>
+      </li>
+
+      <!-- image grid slide - :has(siblings) -->
+      <li class="slide-item">
+        <a href="#" class="slide-anchor">Has hover</a>
+        <div class="slide-content">
+          <div class="slide-screen image-grid-slide">
+            <ul class="image-grid">
+              <li class="both">
+                <img
+                  src="https://i.ibb.co/R0RbcQj/ddhick1.webp"
+                  alt="ddhick1"
+                />
+              </li>
+              <li class="hick">
+                <img
+                  src="https://i.ibb.co/xYsypHm/hickory4.webp"
+                  class="hick"
+                  alt="hickory4"
+                />
+              </li>
+              <li class="dd">
+                <img
+                  src="https://i.ibb.co/8B3T6Zv/delaney1.webp"
+                  alt="delaney1"
+                />
+              </li>
+              <li class="dd">
+                <img
+                  src="https://i.ibb.co/VwvMdjh/delaney2.webp"
+                  alt="delaney2"
+                />
+              </li>
+              <li class="both">
+                <img
+                  src="https://i.ibb.co/Gd1TSZk/ddhick3.webp"
+                  alt="ddhick3"
+                />
+              </li>
+              <li class="hick">
+                <img
+                  src="https://i.ibb.co/yPWVggT/hickory2.webp"
+                  alt="hickory2"
+                />
+              </li>
+              <li class="hick">
+                <img
+                  src="https://i.ibb.co/pjrgbzJ/hickory3.webp"
+                  alt="hickory3"
+                />
+              </li>
+              <li class="dd">
+                <img
+                  src="https://i.ibb.co/BCsM95n/delaney3.webp"
+                  alt="delaney3"
+                />
+              </li>
+              <li class="both">
+                <img
+                  src="https://i.ibb.co/XsmBhSG/ddhick5.webp"
+                  alt="ddhick5"
+                />
+              </li>
+            </ul>
+            <label for="highlight-all">
+              Highlight all
+              <input id="highlight-all" type="checkbox" />
+            </label>
+            <label for="display-image-grid-tips">
+              Display image grid tips
+              <input id="display-image-grid-tips" type="checkbox" />
+            </label>
+          </div>
+        </div>
+      </li>
+
+      <!-- image gallery slide - :has(:hover) -->
+      <li class="slide-item">
+        <a href="#" class="slide-anchor">Has siblings</a>
+        <div class="slide-content">
+          <div class="slide-screen image-gallery-slide">
+            <ul class="image-gallery">
+              <li>
+                <img
+                  src="https://i.ibb.co/R0RbcQj/ddhick1.webp"
+                  alt="Delaney and Hickory"
+                />
+              </li>
+              <li>
+                <img
+                  src="https://i.ibb.co/C8Q9SFW/ddhick2.webp"
+                  alt="Delaney and Hickory"
+                />
+              </li>
+              <li>
+                <img
+                  src="https://i.ibb.co/Gd1TSZk/ddhick3.webp"
+                  alt="Delaney and Hickory"
+                />
+              </li>
+              <li>
+                <img
+                  src="https://i.ibb.co/rc8nhC4/ddhick4.webp"
+                  alt="Delaney and Hickory"
+                />
+              </li>
+              <li>
+                <img
+                  src="https://i.ibb.co/XsmBhSG/ddhick5.webp"
+                  alt="Delaney and Hickory"
+                />
+              </li>
+              <li>
+                <img
+                  src="https://i.ibb.co/8B3T6Zv/delaney1.webp"
+                  alt="Delaney"
+                />
+              </li>
+              <li>
+                <img
+                  src="https://i.ibb.co/VwvMdjh/delaney2.webp"
+                  alt="Delaney"
+                />
+              </li>
+              <li>
+                <img
+                  src="https://i.ibb.co/BCsM95n/delaney3.webp"
+                  alt="Delaney"
+                />
+              </li>
+              <li>
+                <img
+                  src="https://i.ibb.co/vvzXsLV/hickory1.webp"
+                  alt="Hickory"
+                />
+              </li>
+              <li>
+                <img
+                  src="https://i.ibb.co/yPWVggT/hickory2.webp"
+                  alt="Hickory"
+                />
+              </li>
+              <li>
+                <img
+                  src="https://i.ibb.co/pjrgbzJ/hickory3.webp"
+                  alt="Hickory"
+                />
+              </li>
+              <li>
+                <img
+                  src="https://i.ibb.co/xYsypHm/hickory4.webp"
+                  alt="Hickory"
+                />
+              </li>
+            </ul>
+            <label for="display-image-gallery-tips" class="image-gallery-tips">
+              Display image gallery tips
+              <input id="display-image-gallery-tips" type="checkbox" />
+            </label>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </body>
 </html>

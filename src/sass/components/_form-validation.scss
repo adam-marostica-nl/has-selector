@@ -1,0 +1,45 @@
+.form-validation {
+  padding: 2rem;
+
+  input[type="number"] {
+    // Remove spinner arrows
+    -moz-appearance: textfield; // Firefox
+    appearance: textfield;
+
+    // Chrome, Safari, Edge, Opera
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+    width: 100px;
+  }
+
+  label {
+    padding: 1rem;
+    border-radius: 1rem;
+  }
+
+  input {
+    padding: 0.25rem;
+  }
+
+  label:has(input:user-valid) {
+    background-color: hsl(120, 100%, 80%);
+    & ~ .correct {
+      display: block;
+    }
+  }
+
+  label:has(input:user-invalid) {
+    background-color: hsl(0, 100%, 80%);
+    & ~ .incorrect {
+      display: block;
+    }
+  }
+  
+  p {
+    margin-top: 1rem;
+    display: none;
+  }
+}
